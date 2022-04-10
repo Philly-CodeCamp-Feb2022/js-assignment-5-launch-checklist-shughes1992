@@ -10,16 +10,11 @@ window.addEventListener("load", function () {
         let fuelLevel = document.querySelector("input[name=fuelLevel]").value;
         let cargoLevel = document.querySelector("input[name=cargoMass]").value;
 
-        console.log(pilotName);
-        console.log(copilotName);
-        console.log(fuelLevel);
-        console.log(cargoLevel);
-            
-    const allFields_required = "All fields required!";
-    const pilot_required = "Please enter a valid Pilot name!";
-    const coPilot_required = "Please enter a valid Co-Pilot name";
-    const fuelLevel_required = "Please enter fuel level";
-    const cargoMass_required = "Please enter cargo mass";
+        const allFields_required = "All fields required!";
+        const pilot_required = "Please enter a valid Pilot name!";
+        const coPilot_required = "Please enter a valid Co-Pilot name";
+        const fuelLevel_required = "Enter valid fuel level number";
+        const cargoMass_required = "Enter cargo mass number";
 
         if (pilotName === "" || copilotName === "" || fuelLevel === "" || cargoLevel === "") {
             alert(allFields_required);
@@ -33,7 +28,14 @@ window.addEventListener("load", function () {
             alert(coPilot_required)
         event.preventDefault();
 
-        };
+        } else if (isNaN(fuelLevel) === true) {
+            alert(fuelLevel_required);
+        event.preventDefault();
+
+        } else if (isNaN(cargoLevel) === true) {
+            alert(cargoMass_required);
+        event.preventDefault();
+        }
         
     })
     

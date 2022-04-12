@@ -4,15 +4,15 @@
 // function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
 //     // Here is the HTML formatting for our mission target div.
 //     /*
-//                  <h2>Mission Destination</h2>
-//                  <ol>
-//                      <li>Name: </li>
-//                      <li>Diameter: </li>
-//                      <li>Star: ${star}</li>
-//                      <li>Distance from Earth: </li>
-//                      <li>Number of Moons: </li>
-//                  </ol>
-//                  <img src="">
+                //  <h2>Mission Destination</h2>
+                //  <ol>
+                //      <li>Name: </li>
+                //      <li>Diameter: </li>
+                //      <li>Star: ${star}</li>
+                //      <li>Distance from Earth: </li>
+                //      <li>Number of Moons: </li>
+                //  </ol>
+                //  <img src="">
 //     */
 // }
 
@@ -27,8 +27,11 @@
 // async function myFetch() {
 //     let planetsReturned;
 
-//     planetsReturned = await fetch().then(function (response) {
-//     });
+//     planetsReturned =     fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
+//         response.json().then(function (json) {
+//             console.log(json);
+//         })
+//     })
 
 //     return planetsReturned;
 // }

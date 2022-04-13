@@ -1,6 +1,7 @@
 // Write your JavaScript code here!
 
 window.addEventListener("load", function() {
+
     fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
         response.json().then( function(json) {
             const div = document.getElementById("missionTarget");
@@ -111,8 +112,6 @@ window.addEventListener("load", function() {
             fuelStatus.innerHTML = `Fuel level high enough for launch`;
             cargoStatus.innerHTML = `Cargo mass low enough for launch`;
             launchStatus.innerHTML = `All ready to BLAST OFF!`;
-
-
         }
         event.preventDefault();
     });
